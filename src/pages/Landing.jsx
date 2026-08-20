@@ -693,7 +693,7 @@ function AccessibilitySection() {
                 </div>
 
                 {/* Signal nodes */}
-                {[
+                {/* {[
                   { x: -48, y: -30, label: 'Weather API' },
                   { x: 48,  y: -20, label: 'Historical Data' },
                   { x: -40, y: 30,  label: 'Prediction' },
@@ -715,7 +715,7 @@ function AccessibilitySection() {
                     </div>
                     <span className="text-[8px] text-white/35 whitespace-nowrap">{label}</span>
                   </div>
-                ))}
+                ))} */}
 
                 {/* Connecting lines */}
                 <svg
