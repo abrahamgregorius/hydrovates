@@ -123,7 +123,7 @@ function Navbar() {
               <circle cx="12" cy="9" r="2.5"/>
             </svg>
           </div>
-          <span className="font-semibold text-[15px] tracking-tight">Early Risk</span>
+          <span className="font-semibold text-[15px] tracking-tight">Hydrovates</span>
         </a>
 
         {/* Nav links */}
@@ -599,7 +599,7 @@ function AccessibilitySection() {
               </div>
 
               {/* Signal nodes */}
-              {[
+              {/* {[
                 { x: -60, y: -40, label: 'Weather API' },
                 { x: 60, y: -30, label: 'Historical Data' },
                 { x: -50, y: 50, label: 'Prediction Model' },
@@ -615,7 +615,7 @@ function AccessibilitySection() {
                   </div>
                   <span className="text-[9px] text-white/40 whitespace-nowrap">{label}</span>
                 </div>
-              ))}
+              ))} */}
 
               {/* Connecting lines */}
               <svg className="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 300 300" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
