@@ -136,7 +136,7 @@ function Navbar() {
                 <circle cx="12" cy="9" r="2.5"/>
               </svg>
             </div>
-            <span className="font-semibold text-[15px] tracking-tight">Early Risk</span>
+            <span className="font-semibold text-[15px] tracking-tight">Hydrovates</span>
           </a>
 
           {/* Desktop nav */}
@@ -784,7 +784,7 @@ function CommunitySection() {
           </h2>
           <p className="text-[15px] text-white/45 leading-relaxed text-center max-w-lg mx-auto mb-10">
             Whether you're an individual, a neighborhood group, or a government agency — 
-            Early Risk gives you the information you need to act early.
+            Hydrovates gives you the information you need to act early.
           </p>
         </Reveal>
 
@@ -973,7 +973,7 @@ function Footer() {
                   <circle cx="12" cy="9" r="2.5"/>
                 </svg>
               </div>
-              <span className="font-semibold text-white text-[15px]">Early Risk</span>
+              <span className="font-semibold text-white text-[15px]">Hydrovates</span>
             </div>
             <p className="text-[12px] text-white/35 leading-relaxed m-0">
               AI-powered flood intelligence<br />for safer, more prepared communities.
@@ -1002,7 +1002,7 @@ function Footer() {
           className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-3"
           style={{ borderTop: '1px solid rgba(255,255,255,0.06)' }}
         >
-          <p className="text-[11px] text-white/25 m-0">© 2026 Early Risk — ISIF Competition Project</p>
+          <p className="text-[11px] text-white/25 m-0">© 2026 Hydrovates — ISIF Competition Project</p>
           <p className="text-[11px] text-white/25 m-0 italic">Built for safer, more prepared communities.</p>
         </div>
       </div>
@@ -1018,7 +1018,7 @@ export default function Landing() {
       <main>
         {/* ── Hero ── */}
         <section
-          className="relative min-h-screen flex items-center overflow-hidden pt-14"
+          className="relative min-h-screen flex items-center overflow-hidden "
           style={{ background: 'linear-gradient(160deg, #020817 0%, #030d2e 50%, #020817 100%)' }}
         >
           <RainfallCanvas />

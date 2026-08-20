@@ -77,7 +77,7 @@ export default function Home() {
               <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" />
               <circle cx="12" cy="9" r="2.5" />
             </svg>
-            SiagaBanjir
+            Hydrovates
           </a>
 
           {/* Nav links */}
@@ -311,7 +311,7 @@ export default function Home() {
             Prediksi ini dihasilkan oleh model AI. Selalu ikuti instruksi resmi dari BNPB, BPBD, atau otoritas kebencanaan setempat. Sistem ini bukan pengganti peringatan resmi.
           </p>
           <p className="text-[12px] text-[#6b6375] dark:text-[#9ca3af] opacity-50 m-0">
-            © 2026 SiagaBanjir — Proyek ISIF
+            © 2026 Hydrovates
           </p>
         </div>
       </footer>
