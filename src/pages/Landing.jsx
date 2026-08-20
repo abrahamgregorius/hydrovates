@@ -1,5 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { motion, useInView } from 'framer-motion'
+import { useNavigate } from 'react-router-dom'
+import { supabase } from '../lib/supabase'
 
 // ─── Helpers ────────────────────────────────────────────────────────────────
 const fadeUp = {
@@ -154,13 +156,13 @@ function Navbar() {
 
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center gap-3">
-            <a
-              href="#check-risk"
+            <button
+              onClick={handleCheckRisk}
               className="text-[14px] font-semibold text-[#020817] no-underline px-4 py-2 rounded-lg hover:opacity-90 transition-opacity duration-150"
               style={{ background: '#00d4ff' }}
             >
               Check Flood Risk
-            </a>
+            </button>
           </div>
 
           {/* Mobile hamburger */}
@@ -214,17 +216,16 @@ function Navbar() {
           ))}
         </nav>
         <div className="mt-auto">
-          <a
-            href="#check-risk"
+          <button
+            onClick={() => { setMenuOpen(false); handleCheckRisk() }}
             className="flex items-center justify-center gap-2 text-[16px] font-semibold text-[#020817] no-underline px-6 py-4 rounded-xl w-full"
             style={{ background: '#00d4ff' }}
-            onClick={() => setMenuOpen(false)}
           >
             Check Flood Risk
             <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
               <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
             </svg>
-          </a>
+          </button>
         </div>
       </div>
     </>
@@ -1012,6 +1013,13 @@ function Footer() {
 
 // ─── Page ─────────────────────────────────────────────────────────────────────
 export default function Landing() {
+  const navigate = useNavigate()
+
+  const handleCheckRisk = async () => {
+    const { data } = await supabase.auth.getUser()
+    navigate(data.user ? '/dashboard' : '/login')
+  }
+
   return (
     <div style={{ background: '#020817', minHeight: '100vh' }}>
       <Navbar />
@@ -1094,8 +1102,8 @@ export default function Landing() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.65, delay: 0.24, ease: [0.25, 0.46, 0.45, 0.94] }}
                 >
-                  <a
-                    href="#check-risk"
+                  <button
+                    onClick={handleCheckRisk}
                     className="flex items-center justify-center gap-2 text-[15px] font-semibold text-[#020817] no-underline px-7 py-3.5 rounded-xl w-full sm:w-auto transition-opacity duration-150 hover:opacity-90"
                     style={{ background: '#00d4ff', boxShadow: '0 0 30px rgba(0,212,255,0.3)' }}
                   >
@@ -1103,7 +1111,7 @@ export default function Landing() {
                     <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                       <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
                     </svg>
-                  </a>
+                  </button>
                   <a
                     href="#how-it-works"
                     className="flex items-center justify-center gap-2 text-[15px] font-medium text-white/65 no-underline px-7 py-3.5 rounded-xl w-full sm:w-auto transition-colors duration-150 hover:text-white"
